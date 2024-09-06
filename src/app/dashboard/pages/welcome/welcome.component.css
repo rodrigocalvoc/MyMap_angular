@@ -1,0 +1,150 @@
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+body {
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animaciones en la sección de héroe */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://fastly.picsum.photos/id/484/2000/1000.jpg?hmac=mYuN-82dDjoXBCvMDAJpLBUwCdLJ5kxR7CuDMTfNnvo');
+  background-image: url('https://fastly.picsum.photos/id/525/2000/1000.jpg?hmac=HKxNbqZOLsqfxo69_adxBkNWjwxnCM1qPO3GYB61rxo');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-out;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #333;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #666;
+  animation: fadeIn 2s ease-out 0.5s;
+}
+
+.cta-button {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  animation: fadeIn 2.5s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0069d9;
+  transform: scale(1.05);
+}
+
+
+.features-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  color: #333;
+  animation: fadeIn 3s ease-out;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 2s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #007bff;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+  .hero-text {
+    max-width: 90%;
+    padding: 15px;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .cta-button {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+  .features-section {
+    padding: 30px 0;
+  }
+  .feature {
+    padding: 15px;
+  }
+  .feature h3 {
+    font-size: 1.25rem;
+  }
+  .feature p {
+    font-size: 1rem;
+  }
+}
+

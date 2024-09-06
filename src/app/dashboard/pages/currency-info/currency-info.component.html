@@ -1,0 +1,44 @@
+<body>
+  <div class="container">
+      <h1>Consulta la Divisa</h1>
+      <p class="lead">Escribe el nombre de un país y descubre cuál es su divisa.</p>
+
+
+
+
+
+      <div class="ng-autocomplete d-flex align-items-center">
+
+
+
+        <ng-autocomplete
+
+          [(ngModel)]="input"
+          [data]="data"
+          [searchKeyword]="keyword"
+          placeholder="Seleccione un país"
+          [itemTemplate]="itemTemplate"
+          [notFoundTemplate]="notFoundTemplate">
+        </ng-autocomplete>
+
+        <ng-template #itemTemplate let-item>
+          <a [innerHTML]="item.name"></a>
+        </ng-template>
+
+        <ng-template #notFoundTemplate let-notFound>
+          <div [innerHTML]="notFound"></div>
+        </ng-template>
+        <button (click)="searchButton()"  class="btn btn-primary ms-2">Ok</button>
+
+
+      </div>
+
+
+
+      <div id="result" class="card mt-4">
+          <h2 class="country-name">{{divisa}}</h2>
+      </div>
+  </div>
+
+
+</body>

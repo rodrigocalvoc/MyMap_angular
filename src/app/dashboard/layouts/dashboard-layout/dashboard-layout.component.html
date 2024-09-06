@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light m-1">
+  <a class="navbar-brand m-2" href="">
+    <img src="../../../../assets/images/world-location-svgrepo-com.svg" width="40" height="40" class="d-inline-block align-top" alt="">
+    MyMapApp
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav m-2">
+      <li class="nav-item active">
+        <a (click)="onNavigateCountries()" class="nav-link"> <span class="sr-only">My Map</span></a>
+      </li>
+      <li class="nav-item active">
+        <a (click)="onNavigateRandomCountry()" class="nav-link  ">Mi próximo viaje<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item active">
+        <a (click)="onCapitalInfo()" class="nav-link ">Capital<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item active">
+        <a (click)="onCurrencyInfo()" class="nav-link ">Moneda<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item active">
+        <a (click)="onPopulationInfo()" class="nav-link ">Población<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item active">
+        <a (click)="onFlagInfo()" class="nav-link ">Bandera<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="bloqueado" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{userName}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a (click)="onLogout()" class="dropdown-item " href="bloqueado">Cerrar Sesión</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
+
+
