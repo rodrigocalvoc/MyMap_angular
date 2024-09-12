@@ -19,6 +19,7 @@ export class DashboardLayoutComponent {
 
   onLogout() {
     this.authService.logout();
+    this.router.navigate(['/auth/login']);
   }
 
   userName:string  = this.user()?.name!;
